@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+#container{
+    width: 90%;
+    height: 1300px;
+    background-color: white;
+    margin: 10px auto;
+}
+
+header {
+    display: inline-block;
+    background: #000;
+    width: 1230px;
+    height: 150px;
+    display: inline-block;
+}
+
+header .redes-sociales {
+    background-color: #fff;
+    display: inline-block;
+    margin-left: 10px;
+    align-items: flex-start;
+    
+}
+
+.redes-sociales .fa-facebook{
+    color: blue; 
+    border-radius: 100px;
+}
+
+.redes-sociales .fa-instagram{
+    color: orange;
+    border-radius: 100px;
+}
+
+.redes-sociales .fa-youtube{
+    color: red;
+    border-radius: 100px;
+}
+
+
+.menu {
+    background-color: #000;
+    color: #fff;
+    width: 1230px;
+    height: 40px;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none; 
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: blue;
+}
+
+.menu ul li{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+}
+
+#banner {
+    width: 1230px;
+    height: 325;
+    background: yellow;
+}
+
+.productos {
+    width: 910px;
+    height: 500;
+    background-color: green;
+    margin-top: 10px;
+}
+
+
+
+
+
