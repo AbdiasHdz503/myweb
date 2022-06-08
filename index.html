@@ -7,6 +7,24 @@
     <script src="https://kit.fontawesome.com/fdc2bcf56a.js" crossorigin="anonymous"></script>
     <title>Epic Games | Inicio</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="respond.min.js"></script>
+    <script defer src="js/jquery.flexslider.js"></script>
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        SyntaxHighlighter.all();
+      });
+      $(window).load(function(){
+        $('.flexslider').flexslider({
+          animation: "slide",
+          start: function(slider){
+            $('body').removeClass('loading');
+          }
+        });
+      });
+    </script>	
+
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
   </head>
   <body>
@@ -57,14 +75,17 @@
            <li>
             <img src="./img/bannergtav.png" class="img-responsive" alt="">
          </li>
-         
+        </li>
+        <li>
+         <img src="./img/bannerfortnite.png" class="img-responsive" alt="">
+      </li>
          </ul>
        </div>
      </section>
       </div>
       <section class="productos">
         <article class="p1">
-          <img src=" alt="">
+          <img src=""" alt="">
           <div class="d1"></div>
         </article>
         <article class="p2">
