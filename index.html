@@ -1,104 +1,121 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
-<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="">
-<!--<![endif]-->
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Compudemia</title>
-<script src="https://kit.fontawesome.com/fdc2bcf56a.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de AirBNB</title>
+    <script src="https://kit.fontawesome.com/8451b4edca.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 
-
-<link href="css/estilo.css" rel="stylesheet" type="text/css">
-
-<script src="respond.min.js"></script>
-<!--Codigo necesario flexslider START-->
-<script src="js/jquery.min.js"></script>
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-	<script defer src="js/jquery.flexslider.js"></script>
-	<script type="text/javascript">
-    $(function(){
-      SyntaxHighlighter.all();
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script>	
-<!--Codigo necesario flexslider END-->
-
+    <link rel="stylesheet" href="css/estilo.css">
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=629f8b31703b77001ade9d57&product=sop' async='async'></script>
 </head>
-
 <body>
+    <!-- Messenger Plugin de chat Code -->
+    <div id="fb-root"></div>
 
-<div id="gridContainer">
-  <div id="head">
-    <div id="logo"><img src="img/Epic.png" alt="logo"></div>
-    
-    <div id="redes">
-     <div id="fb"><a href="http://www.facebook.com" target="_blank"><i class='bx bxl-facebook-circle'></i></a></div>
-     <div id="tw"><a href="http://www.twitter.com" target="_blank"><i class='bx bxl-twitter' ></i></a></div>
-     <div id="yt"><a href="http://www.youtube.com" target="_blank"><i class='bx bxl-youtube' ></i></a></div>
+    <!-- Your Plugin de chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
     </div>
-    <div id="titulo">
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "315022955811248");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v14.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+  <main id="container">
+      <header id="header">
+        <div id="logo">
+          <img src="img/Epic.png" width="150"/>
+        </div>
+
+        <div class="redes">
+            
+            <div class="facebook"><a href="https://www.facebook.com" target="_blank"><box-icon type='logo' name='facebook-circle'></box-icon></a></div>
+            <div class="instagram"><a href="https://www.instagram.com" target="_blank"><box-icon type='logo' name='instagram'></box-icon></a></div>
+            <div class="youtube"><a href="https://www.youtube.com" target="_blank"><box-icon type='logo' name='youtube'></box-icon></a></div>
+            <div class="twitter"><a href="https://www.twitter.com" target="_blank"><box-icon type='logo' name='twitter'></box-icon></a></div>
+        </div>
+      </header>
       
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="logo.png" alt="" class="logo">
+        </a>
+        <ul>
+            <li><a class="active" href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Portafolio</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <section></section>
+    <div id="titulo">
+      <H1>JUEGOS</H1>
     </div>
   
-<div id="menu">
-<ul>
-   <li ><a class="active" href="#">Inicio</a></li>
-   <li><a href='#'>Producto</a></li>
-   <li><a href='#'>Galería</a></li>
-   <li><a href='contacto.html'>Contacto</a></li>
-</ul>
-</div>
-
-<!-- HTLM flexslider START-->  
-    <div id="banner">
- 
-     <section class="slider">
-           <div class="flexslider">
-             <ul class="slides">
-				   <li>
-				   	<img src="img/bannergtav.png" class="img-responsive" alt="">
-
-				   </li>
-				    <li>
-				   	<img src="img/bannerrocket.png" class="img-responsive" alt="">
-					</li>
-				  
-          </ul>
-        </div>
-      </section>
-    </div>
-<!-- HTLM flexslider END-->
-  <div id="productos">
-    <div id="p1"><img src="img/p1.png" alt="p2">
-       <div id="d1">Ciberpunk 2077</div>
-    </div>
-       
-    <div id="p2"><img src="img/p2.png" alt="p2">
-      <div id="d2">Call of Duty Black Ops 4</div>
-    </div>
-
-    <div id="p3"><img src="img/p3.png" alt="p3">
-      <div id="d3">Fifa 22</div>
+    <div class="banner">
+        <center><img src="img/bannergtav.gif" width="100%" alt="banner"/></center>
     </div>
     
-    <div id="p4"><img src="img/p4.png" alt="p4">
-      <div id="d4">Minecraft</div>
-    </div>
-  </div>
-  <div id="promo"><img src="img/promociones.jpg" alt="PROMO"></div>
-  <div id="footer"><img src="img/bannercontacto.jpg" alt="footer" width= 100%></div>
-</div>
+    <h2 class="destacados">PRODUCTOS DESTACADOS</h2>
+       <section id="productos">
+        
+        <article class="p1 producto">
+          
+          <section class="content">
+            <h2>Cyberpunk </h2>
+            <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio fugiat dolores incidunt laborum esse est voluptas voluptate quod architecto consequuntur doloribus autem impedit molestias cumque rem aperiam nisi, repellendus sequi.</p>
+          </section>
+        </article>
+        
+        <article class="p2 producto">
+          <section class="content">
+             <h2>Call of Duty Black Ops 4</h2>
+             <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio fugiat dolores incidunt laborum esse est voluptas voluptate quod architecto consequuntur doloribus autem impedit molestias cumque rem aperiam nisi, repellendus sequi.</p>
+          </section>
+        </article>
+        <article class="p3 producto">
+          <section class="content">
+            <h2>FIFA 22 EA Sports</h2>
+            <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio fugiat dolores incidunt laborum esse est voluptas voluptate quod architecto consequuntur doloribus autem impedit molestias cumque rem aperiam nisi, repellendus sequi.</p>
+         </section>
+        </article>
+        <article class="p4 producto">
+          <section class="content">
+            <h2>Minecraft Desktop</h2>
+            <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio fugiat dolores incidunt laborum esse est voluptas voluptate quod architecto consequuntur doloribus autem impedit molestias cumque rem aperiam nisi, repellendus sequi.</p>
+         </section>
+        </article>
+        
+    </section>
+  <footer class="pie">Games|EMPRESA GAMER, Todos los derechos reservados 2022</footer>  
+
+  </main>
+ <script src="app.js"></script>
 </body>
 </html>

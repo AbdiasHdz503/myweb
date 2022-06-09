@@ -1,222 +1,280 @@
-/* Diseño escritorio: de 769 px hasta un máximo de 1232 px.  Hereda estilos de: Diseño móvil y Diseño tableta. */
-
-/*@media only screen and (min-width: 769px) {*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
 
 body{
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-  background-attachment: fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(248, 200, 141, 0.523);
 }
 
-
-#gridContainer {
+#container {
+  width: 90%;
   margin: 2% auto;
-  width: 80%;
-  height: auto;
-  max-width: 1232px;
-  padding-left: 0.9%;
-  padding-right: 0.9%;
-  background-color: #00ccff;
-  border-radius: 2%;
-  overflow: hidden;
+  background: lightgray;
+  margin: 2% auto;
+  padding: 1rem;
+  border-radius: 1.5%;
 }
 
-#head {
-  clear: none;
-  float: left;
-  margin-left: 0;
-  width: 100%;
-  display: block;
-}
-#logo {
-  clear: none;
-  float: left;
-  margin-left: 0;
-  width: 40%;
-  display: block;
-}
-#titulo {
-  clear: none;
-  float: right;
-  width: 15%;
-  display: block;
-  margin-top: 0;
-}
+  #header{
+      background: rgb(240, 215, 215);
+      width: 100%;
+      min-height: 70px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      /*padding: 1.5em;*/
+      
+  }
 
-#redes {
-  margin-left: 0;
-  width: 70%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  background-color: black;
-}
-#fb .bxl-facebook-circle{
-  float: left;
-  width: 24%;
-  color: blue;
-}
-#tw .bxl-twitter{
-  float: left;
-  margin-left: 7%;
-  width: 27%;
-  color:#00ccff;
-}
-#yt .bxl-youtube{
+  #logo{
+    align-self: center;
+    padding: 1%;
+
+  }
+
+  .burguer{
+      align-self: center;
+      padding: 1%; 
+  }
+
+  .redes{
+      display:flex;
+      flex-direction: row;
+      align-self: center;
+      justify-content: right;
+      margin-right: 2% ;
+     
+      
+  }
+
+  .instagram{
+      margin-left: 3%;
+  }
+
+  .youtube{
+      margin-left: 3%;
+  }
+
+  .twitter{
+      margin-left: 3%;
+  }
+
+  #titulo{
+      width: 100%;
+      float: left;
+      display: block;
+      clear: none;
+      color: rgb(253, 255, 255);
+      text-align: center;
+      font-size: 1em;
+      background-color: rgb(58, 59, 103);
+  }
+
+  nav{
+      background: #2fcdcd;
+      height: 80px;
+      width: 100%;
+  }
+  .enlace{
+      position: absolute;
+      padding: 20px 50px;
+  }
+  .logo{
+      height: 40px;
+  }
+  nav ul{
+      float: right;
+      margin-right: 20px;
+  }
+  nav ul li{
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+  }
+  nav ul li a{
+      color: #fff;
+      font-size: 18px;
+      padding: 7px 13px;
+      border-radius: 3px;
+      text-transform: uppercase;
+  }
+  li a.active, li a:hover{
+      background: #000090;
+      transition: .5s;
+  }
+  .checkbtn{
+      font-size: 30px;
+      color: #fff;
+      float: right;
+      line-height: 80px;
+      margin-right: 40px;
+      cursor: pointer;
+      display: none;
+  }
+  #check{
+      display: none;
+  }
+
+  /* Inicio de Media Queries del Menu */
+  @media (max-width: 952px){
+      .enlace{
+          padding-left: 20px;
+      }
+      nav ul li a{
+          font-size: 16px;
+      }
+  }
+
+  /* Inicio de Media Queries del Menu */
+  @media (max-width: 858px){
+      .checkbtn{
+          display: block;
+      }
+      ul{
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: #2c3e50;
+          top: 80px;
+          left: -100%;
+          text-align: center;
+          transition: all .5s;
+      }
+      nav ul li{
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+      }
+      nav ul li a{
+          font-size: 20px;
+      }
+      li a:hover, li a.active{
+          background: none;
+          color: red;
+      }
+      #check:checked ~ ul{
+          left:0;
+      }
+
+     .banner{  
+          display: block;
+          clear: none;
+          float:left;
+          width: 100%;
+      }
+
+      #container {
+          width: 100%;
+          max-width: 858px;
+          background: lightgray;
+          margin: 2% auto;
+          padding: 1rem;
+          border-radius: 1.5%;
+      }
+
+      #productos{
+          width: 100%;    
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+      }
+      
+      .producto{
+          width: 50% ;
+      }
+  }
+
+  /* Fin de MediaQueries del Menu */
  
-  float: left;
-  margin-left: 7%;
-  width: 27%;
-  color: red;
-}
-#menu {
-  clear: none;
-  float: left;
-  margin-bottom: 0;
-  width: 100%;
-  display: block;
-  background: rgb(31, 31, 32);
-}
-
-#menu ul{
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  .banner{
+     margin: 1% auto;
+     width: 100%;
+     height: auto;
+     float: left;
+     display: block;
+     clear: none;
+     margin-bottom: 3.5em;
+  }
   
-}
 
-#menu ul li {
-  display: inline-block;
-  /*background: rgb(31, 31, 32);*/
-}
+  .destacados{
+      width: 100%;
+      text-align: center;
+      font-family: fantasy;
+      font-size: 3rem;
+      color: rgb(247, 247, 255);
+      text-shadow: rgb(0, 0, 8) 5px 3px 5px;
+  }
 
-#menu ul li a {
-  color: white;
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  font-size: 25px;
-  cursor: pointer;
-  border-radius: 10px;
-}
+  #productos{
+  width: 100%;    
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+     
+  }
+ 
+  
+  .content{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      color: blanchedalmond;
+      background: black;
+      margin-top: 60%;
+      padding: 1%;
+      text-align: justify;
+      
+  }
 
-#menu ul li a:hover{
-   background-color: red;
-}
+  .p1 {
+  background-image: url("../img/p1.png");
+  width: 40%;
+  height: 400px;
+  background-size: cover;
+  margin: 2% auto;
+  
+  }
 
-.active{
-  background-color: rgb(244, 9, 17);
-  color: black;
-}
+  .p2 {
+  background-image: url("../img/p2.png");
+  width: 40%;
+  height: 400px;
+  background-size: cover;
+  margin: 2% auto;
+  }
 
-#banner {
-  clear: none;
-  float: left;
-  margin-left: 0;
-  width: 100%;
-  display: block;
-}
-#productos {
-  clear: none;
-  float: left;
-  margin-top: 1%;
-  width: 75%;
-  display: block;
-}
+  .p3 {
+  background-image: url("../img/p3.png");
+  width: 40%;
+  height: 400px;
+  background-size: cover;
+  margin: 2% auto;
+  }
 
-#p1 {
-  clear: none;
-  float: left;
-  margin-left: 0;
-  width: 49%;  
-  display: block;
-}
-#p2 {
-  clear: none;
-  float: left;
-  margin-left: 1%;
-  width: 49%;
-  display: block;
-}
-
-#p3 {
-  clear: none;
-  float: left;
-  margin-left: 0;
-  width: 49%;
-  display: block;
-}
-#p4 {
-  clear: none;
-  float: left;
-  margin-left: 1%;
-  width: 49%;
-  display: block;
-}
-
-#d1 {
-  clear: none;
-  float: left;
-  width: 100%;
-  display: block;
-  font-size: 10px;
-  text-align: center;
-  color: white;
-  background-color: rgb(15, 14, 14);
-}
-
-#d2 {
-  clear: none;
-  float: left;
-  width: 100%;
-  display: block;
-  font-size: 10px;
-  text-align: center;
-  color: white;
-  background-color: rgb(15, 14, 14);
-}
-
-#d3 {
-  clear: both;
-  float: left;
-  margin-left: 0;
-  width: 100%;
-  display: block;
-  font-size: 10px;
-  text-align: center;
-  color: white;
-  background-color: rgb(15, 14, 14);
-}
-
-#d4 {
-  clear: none;
-  float: left;
-  margin-left: 0;
-  width: 100%;
-  display: block;
-  font-size: 10px;
-  text-align: center;
-  color: white;
-  background-color: rgb(15, 14, 14);
-}
-
-#promo {
-  clear: none;
-  float: left;
-  margin-left: 0;
-  margin-top: 1%;
-  width: 25%;
-  display: block;
-}
-
-#footer {
-  clear: none;
-  float: left;
-  margin-left: 0;
-  width: 100%;
-  display: block;
-}
-
-
-/*}*/
+  .p4 {
+  background-image: url("../img/p4.png");
+  width: 40%;
+  height: 400px;
+  background-size: cover;
+  margin: 2% auto;
+  }
+  
+  .pie{
+      width: 100%;
+      height: 60px;
+      color: white;
+      line-height: 50px;
+      text-align: center;
+      background: black;
+      border: 1px solid white;
+      margin-top: 3%;
+      border-radius: 2%;
+  }
